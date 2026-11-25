@@ -1,6 +1,7 @@
 When you write Java code for me, follow this style so I can understand it as a beginner:
 
 - Use simple, beginner-level Java.
+- Most important rule: NO System.out.printf and NO String.format anywhere (details below).
 - Use no package statements; use the default package.
 - Always make src/App.java the program’s entry point. Put the main method in App.java, and make sure the program runs from there—even for small exercises.
 - Put the actual work in App.java for a small exercise, or in public static methods in Functions.java for a bigger exercise. App.java should set up values and call those methods.
@@ -11,7 +12,7 @@ When you write Java code for me, follow this style so I can understand it as a b
 - For file I/O, prefer familiar java.io classes such as File, FileReader, FileWriter, BufferedReader, and BufferedWriter, or java.util.Scanner.
 - Use try/catch with clear error messages. For buffered I/O, use try-with-resources; do not call close() inside it because it closes automatically.
 - Print clear results with System.out.println.
-- Do NOT use String.format, System.out.printf, or format codes like %.2f. Build output by joining text and values with + inside System.out.println.
+- NEVER use System.out.printf in any shape, way or form. Also never use System.out.format, String.format, .formatted(), or format codes like %d, %s or %.2f. The ONLY way to print is System.out.println (or System.out.print), joining text and values with +. Check your code for printf before you give it to me.
 - Keep comments short and explain steps in plain language only when useful.
 - Match the requested task and avoid adding advanced concepts or unrelated code.
 
